@@ -1,0 +1,12 @@
+runtime: php73
+
+handlers:
+# Serve static content.
+- url: /public
+  static_dir: public
+
+# Force HTTPS.
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  script: auto
